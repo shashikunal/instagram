@@ -1,0 +1,67 @@
+<div class="col-md-test offset-7 mt-4 signupForm">
+  <div class="card-body1">
+    <h1>signup</h1>
+    <p>Sign up to see photos and videos from your friends.</p>
+    <button class="btn btn-block btn-primary mt-2 mb-2">
+      Log in with Facebook
+    </button>
+    <div>or</div>
+    <form action="" #f="ngForm" (ngSubmit)="submit(f)" class="mt-2 mb-2">
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          ngModel
+          name="email"
+          required
+          placeholder="Mobile number or email"
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="password"
+          ngModel
+          class="form-control"
+          name="password"
+          required
+          placeholder="Password"
+        />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary btn-block" [disabled]="!f.valid">
+          Login
+        </button>
+      </div>
+    </form>
+    <div>
+      <p class="p4">
+        By signing up, you agree to our Terms , Data Policy and Cookies Policy.
+      </p>
+    </div>
+    <div class="loginwithsignup">
+      <div class="gr27e">
+        <p class="izU2O" style="margin: 0;">
+          Don't have an account?? <a routerLink="/signup">Sign up</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="APQi1">
+      <p class="b_nGN">Get the app.</p>
+      <div class="iNy2T">
+        <a href="" class="ml-2"
+          ><img
+            src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png"
+        /></a>
+        <a href="">
+          <img
+            class="ml-2"
+            src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png"
+            alt=""
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

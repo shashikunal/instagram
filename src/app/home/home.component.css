@@ -1,0 +1,21 @@
+/* div.left {
+  background: url(https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png);
+  width: 432px;
+  height: 630px;
+} */
+
+/* ::ng-deep.signupForm {
+  max-width: 40% !important;
+  float: left;
+} */
+
+.textleft {
+  text-align: left !important;
+  margin-right: 0px;
+  display: inline-flex;
+}
+
+.img-fluid1 {
+  padding: 120px 0px;
+  margin: -40px;
+}

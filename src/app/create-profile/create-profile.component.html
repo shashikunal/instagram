@@ -1,0 +1,116 @@
+<!-- <div class="container bg-light mt-4 p-4">
+  <h1 class="display-6 text-uppercase">Create Profile</h1>
+  <form>
+    <div class="row">
+      <div class="col-lg-6 col-xs-12 col-sm-6">
+        <div class="form-group">
+          <label for="photo">Photo</label>
+          <input type="file" (change)="upload($event)" accept=".png,.jpg" />
+        </div>
+      </div> -->
+
+<!-- <div class="col-lg-offset-0 col-lg-3 col-xs-12 col-sm-6">
+        <div class="form-group">
+          <label for="Gender" class="select">Gender</label>
+          <select class="form-control" ngModel name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-lg-offset-0 col-lg-3 col-xs-12 col-sm-6">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Date of Birth</label>
+          <input
+            ngModel
+            name="dob"
+            type="date"
+            class="form-control"
+            id="exampleInputEmail1"
+            placeholder="Date of Birth"
+          />
+        </div>
+      </div>
+
+      <div class="col-lg-offset-0 col-lg-4 col-xs-12 col-sm-6">
+        <div class="form-group">
+          <label for="exampleInputEmail1">City</label>
+          <input
+            ngModel
+            name="city"
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            placeholder="Mandya"
+          />
+        </div>
+      </div>
+
+      <div class="col-lg-offset-0 col-lg-2 col-xs-12 col-sm-6">
+        <div class="form-group">
+          <label for="exampleInputEmail1">State</label>
+          <input
+            ngModel
+            name="state"
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            placeholder="karnataka"
+          />
+        </div>
+      </div>
+
+      <div class="col-lg-offset-0 col-lg-6 col-xs-12 col-sm-6">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Pincode</label>
+          <input
+            ngModel
+            name="pincode"
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            placeholder="95822"
+          />
+        </div>
+      </div>
+      <div class="col-lg-offset-0 col-lg-3 col-xs-12 col-sm-12">
+        <div class="form-group">
+          <label for="Gender" class="select">Location</label>
+          <select class="form-control" ngModel name="country">
+            <option *ngFor="let country of countryList" value="{{ country }}">{{
+              country
+            }}</option>
+          </select>
+        </div>
+      </div> -->
+<!-- <div class="form-group btn-block" style="clear: both;">
+        <button class="btn btn-primary">Create Profile</button>
+      </div>
+    </div>
+  </form>
+</div> -->
+<div class="container">
+  <div *ngIf="currentUpload">
+    <div class="progress">
+      <div
+        class="progress-bar progress-bar-animated"
+        [ngStyle]="{ width: currentUpload?.progress + '%' }"
+      ></div>
+    </div>
+    Progress: {{ currentUpload?.name }} | {{ currentUpload?.progress }}%
+    Complete
+  </div>
+
+  <label>
+    <input type="file" (change)="detectFiles($event)" />
+  </label>
+
+  <button [disabled]="!selectedFiles" (click)="uploadSingle()">
+    Upload Single
+  </button>
+
+  <label>
+    <input type="file" (change)="detectFiles($event)" multiple />
+  </label>
+</div>

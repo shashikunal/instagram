@@ -1,0 +1,79 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"
+          >Home <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" *ngIf="isLoggedIn">posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/allposts']"
+          routerLinkActive="router-link-active"
+          *ngIf="isLoggedIn"
+          >allposts</a
+        >
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a
+          class="nav-link btn btn-primary text-light ml-2 mr-2"
+          [routerLink]="['/user_profile']"
+          routerLinkActive="router-link-active"
+          *ngIf="isLoggedIn"
+        >
+          👨‍⚕ Profiles</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/login']"
+          routerLinkActive="router-link-active"
+          *ngIf="!isLoggedIn"
+          >Login</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="['/signup']"
+          routerLinkActive="router-link-active"
+          *ngIf="!isLoggedIn"
+          >Signup</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link btn btn-primary text-light"
+          (click)="logout()"
+          *ngIf="isLoggedIn"
+          >💀Logout</a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
